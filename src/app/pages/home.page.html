@@ -1,36 +1,53 @@
 <div class="container">
-    <div class="row">
-        <div class="position-relative shadow-lg p-3 mb-5 bg-body rounded">
-            <ul class="nav justify-content-center">
-                <li class="nav-item">
-                    <div class="btn-group" dropdown>
-                        <button id="button-animated" dropdownToggle type="button"
-                            class="btn btn-primary dropdown-toggle" aria-controls="dropdown-animated">
-                            Button <span class="caret"></span>
-                        </button>
-                        <ul id="dropdown-animated" *dropdownMenu class="dropdown-menu" role="menu"
-                            aria-labelledby="button-animated">
-                            <li role="menuitem"><a class="dropdown-item" href="#">Action</a></li>
-                            <li role="menuitem"><a class="dropdown-item" href="#">Another action</a>
-                            </li>
-                            <li role="menuitem"><a class="dropdown-item" href="#">Something else
-                                    here</a></li>
-                        </ul>
-                    </div>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Active</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled">Disabled</a>
-                </li>
+  <div class="row">
+    <div class="position-relative shadow-lg p-3 mb-5 bg-body rounded">
+      <ul class="nav justify-content-center">
+        <li class="nav-item">
+          <div class="btn-group" dropdown>
+            <button
+              id="button-animated"
+              dropdownToggle
+              type="button"
+              class="btn btn-primary dropdown-toggle"
+              aria-controls="dropdown-animated"
+            >
+              Button <span class="caret"></span>
+            </button>
+            <ul
+              id="dropdown-animated"
+              *dropdownMenu
+              class="dropdown-menu"
+              role="menu"
+              aria-labelledby="button-animated"
+            >
+              <li role="menuitem">
+                <a class="dropdown-item" routerLink="">Home</a>
+              </li>
+              <li role="menuitem">
+                <a class="dropdown-item" routerLink="inside">Inside</a>
+              </li>
             </ul>
-        </div>
+          </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Active</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled">Disabled</a>
+        </li>
+      </ul>
     </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <router-outlet></router-outlet>
+    </div>
+    <div class="col">left column</div>
+  </div>
 </div>

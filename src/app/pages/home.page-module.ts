@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import { HomePage } from './home.page';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
+import { InsidePageModule } from './inside.page-module';
 
 @NgModule({
   imports: [
@@ -14,11 +15,12 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
       {
         path: '',
         component: HomePage,
-      }
-    ])],
+        loadChildren: () => InsidePageModule,
+      },
+    ]),
+  ],
   declarations: [HomePage],
   providers: [],
-  exports: []
+  exports: [],
 })
-export class HomePageModule {
-}
+export class HomePageModule {}
