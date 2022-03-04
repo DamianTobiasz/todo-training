@@ -13,6 +13,6 @@ import {
 })
 export class HomePage {
   imagesrc = {
-    url: 'https://zasoby.ekologia.pl/artykulyNew/28014/xxl/shutterstock-556727587_800x600.jpg',
+    url: 'https://i.iplsc.com/wojna-o-norki-branza-kontra-ekolodzy/0009KQSKHLJY60HE-C122-F4.jpg',
   };
 }
