@@ -11,4 +11,8 @@ import {
   changeDetection: ChangeDetectionStrategy.OnPush,
   providers: [],
 })
-export class HomePage {}
+export class HomePage {
+  imagesrc = {
+    url: 'https://zasoby.ekologia.pl/artykulyNew/28014/xxl/shutterstock-556727587_800x600.jpg',
+  };
+}
