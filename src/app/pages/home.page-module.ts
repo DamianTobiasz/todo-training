@@ -2,14 +2,10 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { HomePage } from './home.page';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { InsidePageModule } from './inside.page-module';
 
 @NgModule({
   imports: [
-    BrowserAnimationsModule,
-    BsDropdownModule.forRoot(),
     CommonModule,
     RouterModule.forChild([
       {
