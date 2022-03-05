@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomePageModule } from './pages/home.page-module';
 import { AboutUsPageModule } from './pages/about-us.page-module';
+import { EmployeeDetailsPageModule } from './pages/employee-details.page-module';
 
 const routes: Routes = [
   {
@@ -12,10 +13,19 @@ const routes: Routes = [
     path: 'about-us',
     loadChildren: () => AboutUsPageModule,
   },
+  {
+    path: 'pracownik/:name',
+    loadChildren: () => EmployeeDetailsPageModule,
+  },
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes), HomePageModule, AboutUsPageModule],
+  imports: [
+    RouterModule.forRoot(routes),
+    HomePageModule,
+    AboutUsPageModule,
+    EmployeeDetailsPageModule,
+  ],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
