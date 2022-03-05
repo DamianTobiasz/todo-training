@@ -13,5 +13,5 @@ import { BsDropdownConfig } from 'ngx-bootstrap/dropdown';
   ],
 })
 export class AppComponent {
-  title = 'todo-training';
+  isCollapsed = false;
 }
