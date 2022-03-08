@@ -5,9 +5,9 @@ import {
 } from '@angular/core';
 
 @Component({
-  selector: 'lib-inside-page',
-  templateUrl: './inside.page.html',
+  selector: 'lib-employees-page',
+  templateUrl: './employees.page.html',
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class InsidePage {}
+export class EmployeesPage {}
