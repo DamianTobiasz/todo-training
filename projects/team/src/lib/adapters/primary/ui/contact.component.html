@@ -1,0 +1,8 @@
+<div class="container">
+  <ul *ngFor="let info of contactInfo$ | async">
+    <li>
+      Name: {{ info.name }}<br />
+      Number: {{ info.number }}
+    </li>
+  </ul>
+</div>

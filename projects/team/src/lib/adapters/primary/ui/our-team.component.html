@@ -1,35 +1,19 @@
-<div class="container-fluid md">
-  <h2 class="text-start">AboutUsPage</h2>
-
-  <p class="text-start fs-5 fw-light">
-    Looking to the future and a need for farmland that would provide a ideal
-    climate for mink; natural resources to support a feed program; a labor force
-    with professional standards; and room for growth; Jan looked to Poland. It
-    war here in 1991 that the first expansion of Unicorn Fur Farms took place.
-    In years to come, John and Twan took over the helm and increased the van
-    Ansem family holdings to onclude mink farms in the USA, Latvia and Romania.
-  </p>
-  <div class="row">
-    <div
-      class="col d-flex justify-content-center"
-      *ngFor="let link of imgSrc$ | async"
-    >
-      <div class="card d-inline-block p-3" style="width: 18rem">
-        <img
-          [src]="link.url"
-          class="card-img-top"
-          style="height: 10rem"
-          alt="..."
-        />
-        <div class="card-body">
-          <h5 class="card-title text-center">
-            {{ link.name }}
-          </h5>
-          <p class="card-text text-center">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
-            mollitia, molestiae quas vel sint commodi repudiandae consequuntur
-          </p>
-        </div>
+<div class="row">
+  <div
+    class="col d-flex justify-content-center"
+    *ngFor="let e of employees$ | async"
+  >
+    <div class="card d-inline-block p-3" style="width: 18rem">
+      <img [src]="e.url" class="card-img-top" style="height: 10rem" alt="..." />
+      <div class="card-body">
+        <h5 class="card-title text-center">
+          {{ e.name }}
+        </h5>
+        <a [routerLink]="'/pracownik/' + e.name">{{ e.name }}</a>
+        <p class="card-text text-center">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
+          mollitia, molestiae quas vel sint commodi repudiandae consequuntur
+        </p>
       </div>
     </div>
   </div>

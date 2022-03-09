@@ -12,7 +12,7 @@ import { of } from 'rxjs';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class OurTeamComponent {
-  imgSrc$ = of([
+  employees$ = of([
     {
       name: 'Andrzej',
       url: 'https://euro-kontakt.eu/wp-content/uploads/2020/04/pracownik-rolny.png.webp',
