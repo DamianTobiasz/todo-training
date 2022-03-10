@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
+import { ContactFormComponentModule } from 'projects/messages/src/public-api';
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -13,6 +14,7 @@ import { CollapseModule } from 'ngx-bootstrap/collapse';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    ContactFormComponentModule,
     CollapseModule.forRoot(),
   ],
   providers: [],

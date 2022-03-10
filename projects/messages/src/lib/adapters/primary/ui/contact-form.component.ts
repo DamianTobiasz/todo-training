@@ -12,5 +12,12 @@ import { FormGroup, FormControl } from '@angular/forms';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ContactFormComponent {
-  readonly messageForm: FormGroup = new FormGroup({email: new FormControl(), text: new FormControl()});
+  readonly messageForm: FormGroup = new FormGroup({
+    email: new FormControl(),
+    text: new FormControl(),
+  });
+
+  onFormSubmited(messageForm: FormGroup): void {
+    console.log(messageForm.getRawValue());
+  }
 }
