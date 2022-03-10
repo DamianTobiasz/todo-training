@@ -18,6 +18,6 @@ export class ContactFormComponent {
   });
 
   onFormSubmited(messageForm: FormGroup): void {
-    console.log(messageForm.getRawValue());
+    alert(messageForm.get('email').value + ' ' + messageForm.get('text').value);
   }
 }
