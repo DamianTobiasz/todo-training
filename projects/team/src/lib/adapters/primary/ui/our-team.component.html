@@ -1,23 +1,22 @@
 <div class="row">
   <div
     class="col d-flex justify-content-center"
-    *ngFor="let e of teamMembers$ | async"
+    *ngFor="let t of teamMembers$ | async"
   >
     <div class="card d-inline-block p-3" style="width: 18rem">
       <img
-        [src]="e.imageUrl"
+        [src]="t.imageUrl"
         class="card-img-top"
         style="height: 10rem"
         alt="..."
       />
       <div class="card-body">
         <h5 class="card-title text-center">
-          {{ e.name }}
+          {{ t.name }}
         </h5>
-        <a [routerLink]="'/pracownik/' + e.name">{{ e.name }}</a>
+        <a [routerLink]="'/pracownik/' + t.name">{{ t.name }}</a>
         <p class="card-text text-center">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime
-          mollitia, molestiae quas vel sint commodi repudiandae consequuntur
+          {{ t.bio }}
         </p>
       </div>
     </div>
