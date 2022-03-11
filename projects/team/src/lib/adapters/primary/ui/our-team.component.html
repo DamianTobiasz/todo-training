@@ -16,7 +16,8 @@
         </h5>
         <a [routerLink]="'/pracownik/' + t.name">{{ t.name }}</a>
         <p class="card-text text-center">
-          {{ t.bio }}
+          {{ t.bio }}<br />
+          Department: {{ t.department.name }}
         </p>
       </div>
     </div>
