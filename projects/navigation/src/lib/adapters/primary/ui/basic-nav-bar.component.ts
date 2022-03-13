@@ -23,19 +23,19 @@ import { NavliteDTO } from '../../../application/ports/secondary/navlite.dto';
 export class BasicNavBarComponent {
   links$: Observable<NavliteDTO[]> = of([
     {
-      link: '',
+      link: '/',
       name: 'Home',
     },
     {
-      link: 'about-us',
+      link: '/about-us',
       name: 'About us',
     },
     {
-      link: 'contact',
+      link: '/contact',
       name: 'Contact',
     },
     {
-      link: 'kontakt',
+      link: '/kontakt',
       name: 'Kontakt',
     },
   ]);
