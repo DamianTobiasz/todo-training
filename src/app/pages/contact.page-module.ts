@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { ContactPage } from './contact.page';
-import { ContactComponentModule } from 'projects/team/src/public-api';
+import { ContactComponentModule } from '@team';
 
 @NgModule({
   imports: [

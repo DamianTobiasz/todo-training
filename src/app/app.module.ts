@@ -1,16 +1,19 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { AngularFireModule } from '@angular/fire';
+import { environment } from 'src/environments/environment';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
-import { ContactFormComponentModule } from 'projects/messages/src/public-api';
-import { BasicNavBarComponentModule } from 'projects/navigation/src/public-api';
+import { ContactFormComponentModule } from '@messages';
+import { BasicNavBarComponentModule } from '@navigation';
 @NgModule({
   declarations: [AppComponent],
   imports: [
+    AngularFireModule.initializeApp(environment.firebase),
     BsDropdownModule.forRoot(),
     BrowserModule,
     AppRoutingModule,

@@ -4,7 +4,10 @@ import { HomePageModule } from './pages/home.page-module';
 import { AboutUsPageModule } from './pages/about-us.page-module';
 import { EmployeeDetailsPageModule } from './pages/employee-details.page-module';
 import { EmployeesPageModule } from './pages/employees.page-module';
-import { OurTeamComponentModule } from 'projects/team/src/public-api';
+import {
+  FirebaseTeamMembersServiceModule,
+  OurTeamComponentModule,
+} from 'projects/team/src/public-api';
 import { ContactPageModule } from './pages/contact.page-module';
 import { ContactUsPageModule } from './pages/contact-us.page-module';
 

@@ -1,8 +1,8 @@
-import { NgModule, OnInit } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ActivatedRoute, RouterModule } from '@angular/router';
+import { RouterModule } from '@angular/router';
 import { EmployeeDetailsPage } from './employee-details.page';
-import { EmployeeDetailComponentModule } from 'projects/team/src/public-api';
+import { EmployeeDetailComponentModule } from '@team';
 
 @NgModule({
   imports: [

@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "teammembers-192f7": {
+      "hosting": {
+        "todo-training": [
+          "teammembers-192f7"
+        ]
+      }
+    }
+  }
+}
