@@ -7,7 +7,7 @@ import { EmployeesPageModule } from './pages/employees.page-module';
 import {
   FirebaseTeamMembersServiceModule,
   OurTeamComponentModule,
-} from 'projects/team/src/public-api';
+} from '@team';
 import { ContactPageModule } from './pages/contact.page-module';
 import { ContactUsPageModule } from './pages/contact-us.page-module';
 import { AdminPageModule } from './pages/admin.page-module';

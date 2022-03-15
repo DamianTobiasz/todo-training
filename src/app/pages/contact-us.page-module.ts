@@ -7,13 +7,13 @@ import { ContactFormComponentModule } from '../../../projects/messages/src/lib/a
 @NgModule({
   imports: [
     CommonModule,
+    ContactFormComponentModule,
     RouterModule.forChild([
       {
         path: 'kontakt',
         component: ContactUsPage,
       },
     ]),
-    ContactFormComponentModule,
   ],
   declarations: [ContactUsPage],
   providers: [],
