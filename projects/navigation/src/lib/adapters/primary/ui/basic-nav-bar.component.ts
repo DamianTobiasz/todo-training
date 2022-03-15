@@ -38,6 +38,10 @@ export class BasicNavBarComponent {
       link: '/kontakt',
       name: 'Kontakt',
     },
+    {
+      link: '/admin',
+      name: 'Admin',
+    },
   ]);
   isCollapsed = false;
 }

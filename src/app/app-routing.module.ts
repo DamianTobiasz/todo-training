@@ -10,6 +10,7 @@ import {
 } from 'projects/team/src/public-api';
 import { ContactPageModule } from './pages/contact.page-module';
 import { ContactUsPageModule } from './pages/contact-us.page-module';
+import { AdminPageModule } from './pages/admin.page-module';
 
 const routes: Routes = [
   {
@@ -35,6 +36,10 @@ const routes: Routes = [
   {
     path: 'kontakt',
     loadChildren: () => ContactUsPageModule,
+  },
+  {
+    path: 'admin',
+    loadChildren: () => AdminPageModule,
   },
 ];
 

@@ -5,9 +5,12 @@ import { map } from 'rxjs/operators';
 import { GetsAllTeamMemberDtoPort } from '../../../application/ports/secondary/gets-all-team-member.dto-port';
 import { TeamMemberDTO } from '../../../application/ports/secondary/team-member.dto';
 import { filterByCriterion } from '@lowgular/shared';
+import { AddsTeamMemberDtoPort } from '../../../application/ports/secondary/adds-team-member.dto-port';
 
 @Injectable()
-export class FirebaseTeamMembersService implements GetsAllTeamMemberDtoPort {
+export class FirebaseTeamMembersService
+  implements GetsAllTeamMemberDtoPort, AddsTeamMemberDtoPort
+{
   constructor(private _client: AngularFirestore) {}
 
   getAll(criterion: Partial<TeamMemberDTO>): Observable<TeamMemberDTO[]> {
@@ -15,5 +18,9 @@ export class FirebaseTeamMembersService implements GetsAllTeamMemberDtoPort {
       .collection<TeamMemberDTO>('teamMembers')
       .valueChanges({ idField: 'id' })
       .pipe(map((data: TeamMemberDTO[]) => filterByCriterion(data, criterion)));
+  }
+
+  add(teamMember: Partial<TeamMemberDTO>): void {
+    this._client.collection('teamMembers').add(teamMember);
   }
 }
