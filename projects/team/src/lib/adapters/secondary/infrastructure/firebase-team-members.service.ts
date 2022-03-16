@@ -6,10 +6,14 @@ import { GetsAllTeamMemberDtoPort } from '../../../application/ports/secondary/g
 import { TeamMemberDTO } from '../../../application/ports/secondary/team-member.dto';
 import { filterByCriterion } from '@lowgular/shared';
 import { AddsTeamMemberDtoPort } from '../../../application/ports/secondary/adds-team-member.dto-port';
+import { GetsOneTeamMemberDtoPort } from '../../../application/ports/secondary/gets-one-team-member.dto-port';
 
 @Injectable()
 export class FirebaseTeamMembersService
-  implements GetsAllTeamMemberDtoPort, AddsTeamMemberDtoPort
+  implements
+    GetsAllTeamMemberDtoPort,
+    AddsTeamMemberDtoPort,
+    GetsOneTeamMemberDtoPort
 {
   constructor(private _client: AngularFirestore) {}
 
@@ -22,5 +26,11 @@ export class FirebaseTeamMembersService
 
   add(teamMember: Partial<TeamMemberDTO>): void {
     this._client.collection('teamMembers').add(teamMember);
+  }
+
+  getOne(id: string): Observable<TeamMemberDTO> {
+    return this._client
+      .doc<TeamMemberDTO>('teamMembers/' + id)
+      .valueChanges({ idField: 'id' });
   }
 }
