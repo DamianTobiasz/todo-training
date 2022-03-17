@@ -22,11 +22,11 @@ const routes: Routes = [
     loadChildren: () => OurTeamComponentModule,
   },
   {
-    path: 'pracownik',
+    path: 'employees',
     loadChildren: () => EmployeesPageModule,
   },
   {
-    path: 'pracownik/:employeeId',
+    path: 'pracownik',
     loadChildren: () => EmployeeDetailsPageModule,
   },
   {

@@ -9,7 +9,7 @@ import { EmployeeDetailComponentModule } from '@team';
     CommonModule,
     RouterModule.forChild([
       {
-        path: '',
+        path: ':employeeId',
         component: EmployeeDetailsPage,
       },
     ]),
