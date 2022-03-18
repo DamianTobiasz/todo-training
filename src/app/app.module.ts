@@ -10,6 +10,8 @@ import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { CollapseModule } from 'ngx-bootstrap/collapse';
 import { ContactFormComponentModule } from '@messages';
 import { BasicNavBarComponentModule } from '@navigation';
+import { InMemoryContextStorageModule } from '@team';
+
 @NgModule({
   declarations: [AppComponent],
   imports: [
@@ -20,6 +22,7 @@ import { BasicNavBarComponentModule } from '@navigation';
     BrowserAnimationsModule,
     BasicNavBarComponentModule,
     ContactFormComponentModule,
+    InMemoryContextStorageModule,
     CollapseModule.forRoot(),
   ],
   providers: [],

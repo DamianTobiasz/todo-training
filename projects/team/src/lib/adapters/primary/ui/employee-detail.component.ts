@@ -1,4 +1,3 @@
-import { ActivatedRoute } from '@angular/router';
 import {
   Component,
   ViewEncapsulation,
@@ -14,6 +13,12 @@ import {
 
 import { TemplateRef } from '@angular/core';
 import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
+import { switchMap } from 'rxjs/operators';
+import {
+  CONTEXT_DTO_STORAGE,
+  ContextDtoStoragePort,
+} from '../../../application/ports/secondary/context-dto.storage-port';
+import { ContextDTO } from '../../../application/ports/secondary/context.dto';
 
 @Component({
   selector: 'lib-employee-detail',
@@ -22,16 +27,21 @@ import { BsModalService, BsModalRef } from 'ngx-bootstrap/modal';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class EmployeeDetailComponent {
-  teamMember$: Observable<TeamMemberDTO> = this._getsOneTeamMemberDto.getOne(
-    this.activatedRoute.snapshot.params.employeeId
-  );
   modalRef?: BsModalRef;
+  teamMember$: Observable<TeamMemberDTO> = this._contextDtoStoragePort
+    .asObservable()
+    .pipe(
+      switchMap((data: ContextDTO) =>
+        this._getsOneTeamMemberDto.getOne(data.employeeId)
+      )
+    );
 
   constructor(
-    private activatedRoute: ActivatedRoute,
     @Inject(GETS_ONE_TEAM_MEMBER_DTO)
     private _getsOneTeamMemberDto: GetsOneTeamMemberDtoPort,
-    private modalService: BsModalService
+    private modalService: BsModalService,
+    @Inject(CONTEXT_DTO_STORAGE)
+    private _contextDtoStoragePort: ContextDtoStoragePort
   ) {}
 
   openModal(template: TemplateRef<any>): void {

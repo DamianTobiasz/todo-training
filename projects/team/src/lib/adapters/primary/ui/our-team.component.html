@@ -14,7 +14,11 @@
         <h5 class="card-title text-center">
           {{ t.name }}
         </h5>
-        <a [routerLink]="'/pracownik/' + t.id">{{ t.name }}</a>
+        <a
+          [routerLink]="'/pracownik/' + t.id"
+          (click)="onTeamMemberClicked(t)"
+          >{{ t.name }}</a
+        >
         <p class="card-text text-center">
           {{ t.bio }}<br />
           Department: {{ t.department.name }}
