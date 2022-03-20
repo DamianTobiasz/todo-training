@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { EmployeeDetailsPage } from './employee-details.page';
-import { EmployeeDetailComponentModule } from '@team';
+import { EmployeeDetailComponentModule, EmployeeIdResolverModule } from '@team';
+import { EmployeeIdResolver } from 'projects/team/src/lib/adapters/primary/ui/employee-id.resolver';
 
 @NgModule({
   imports: [
@@ -11,9 +12,13 @@ import { EmployeeDetailComponentModule } from '@team';
       {
         path: ':employeeId',
         component: EmployeeDetailsPage,
+        resolve: {
+          employeeId: EmployeeIdResolver,
+        },
       },
     ]),
     EmployeeDetailComponentModule,
+    EmployeeIdResolverModule,
   ],
   declarations: [EmployeeDetailsPage],
   providers: [],

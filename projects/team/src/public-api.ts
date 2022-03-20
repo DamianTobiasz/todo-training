@@ -8,3 +8,4 @@ export * from './lib/adapters/primary/ui/contact.component-module';
 export * from './lib/adapters/secondary/infrastructure/firebase-team-members.service-module';
 export * from './lib/adapters/primary/ui/create-team-member.component-module';
 export * from './lib/adapters/secondary/infrastructure/in-memory-context.storage-module';
+export * from './lib/adapters/primary/ui/employee-id.resolver-module';
