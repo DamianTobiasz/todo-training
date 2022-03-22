@@ -2,7 +2,11 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { EmployeeDetailsPage } from './employee-details.page';
-import { EmployeeDetailComponentModule, EmployeeIdResolverModule } from '@team';
+import {
+  EmployeeDetailComponentModule,
+  EmployeeIdResolverModule,
+  FirebaseTeamMembersServiceModule,
+} from '@team';
 import { EmployeeIdResolver } from 'projects/team/src/lib/adapters/primary/ui/employee-id.resolver';
 
 @NgModule({
@@ -19,6 +23,7 @@ import { EmployeeIdResolver } from 'projects/team/src/lib/adapters/primary/ui/em
     ]),
     EmployeeDetailComponentModule,
     EmployeeIdResolverModule,
+    FirebaseTeamMembersServiceModule,
   ],
   declarations: [EmployeeDetailsPage],
   providers: [],

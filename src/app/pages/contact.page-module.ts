@@ -9,7 +9,7 @@ import { ContactComponentModule } from '@team';
     CommonModule,
     RouterModule.forChild([
       {
-        path: 'contact',
+        path: '',
         component: ContactPage,
       },
     ]),

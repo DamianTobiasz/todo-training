@@ -6,7 +6,6 @@ import {
   FirebaseTeamMembersServiceModule,
   OurTeamComponentModule,
 } from '@team';
-import { EmployeeDetailComponentModule } from '../../../projects/team/src/lib/adapters/primary/ui/employee-detail.component-module';
 
 @NgModule({
   imports: [
@@ -15,11 +14,10 @@ import { EmployeeDetailComponentModule } from '../../../projects/team/src/lib/ad
     FirebaseTeamMembersServiceModule,
     RouterModule.forChild([
       {
-        path: 'about-us',
+        path: '',
         component: AboutUsPage,
       },
     ]),
-    EmployeeDetailComponentModule,
   ],
   declarations: [AboutUsPage],
   providers: [],

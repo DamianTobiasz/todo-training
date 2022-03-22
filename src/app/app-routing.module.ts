@@ -4,10 +4,6 @@ import { HomePageModule } from './pages/home.page-module';
 import { AboutUsPageModule } from './pages/about-us.page-module';
 import { EmployeeDetailsPageModule } from './pages/employee-details.page-module';
 import { EmployeesPageModule } from './pages/employees.page-module';
-import {
-  FirebaseTeamMembersServiceModule,
-  OurTeamComponentModule,
-} from '@team';
 import { ContactPageModule } from './pages/contact.page-module';
 import { ContactUsPageModule } from './pages/contact-us.page-module';
 import { AdminPageModule } from './pages/admin.page-module';
@@ -18,16 +14,16 @@ const routes: Routes = [
     loadChildren: () => HomePageModule,
   },
   {
+    path: 'admin',
+    loadChildren: () => AdminPageModule,
+  },
+  {
     path: 'about-us',
-    loadChildren: () => OurTeamComponentModule,
+    loadChildren: () => AboutUsPageModule,
   },
   {
     path: 'employees',
     loadChildren: () => EmployeesPageModule,
-  },
-  {
-    path: 'pracownik',
-    loadChildren: () => EmployeeDetailsPageModule,
   },
   {
     path: 'contact',
@@ -38,20 +34,13 @@ const routes: Routes = [
     loadChildren: () => ContactUsPageModule,
   },
   {
-    path: 'admin',
-    loadChildren: () => AdminPageModule,
+    path: 'pracownik',
+    loadChildren: () => EmployeeDetailsPageModule,
   },
 ];
 
 @NgModule({
-  imports: [
-    RouterModule.forRoot(routes),
-    HomePageModule,
-    AboutUsPageModule,
-    EmployeeDetailsPageModule,
-    ContactPageModule,
-    ContactUsPageModule,
-  ],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}

@@ -1,6 +1,6 @@
-<div class="container">
-  <ul *ngFor="let info of contactInfo$ | async">
-    <li>
+<div class="container-fluid">
+  <ul>
+    <li *ngFor="let info of contactInfo$ | async">
       Name: {{ info.name }}<br />
       Number: {{ info.number }}
     </li>

@@ -15,7 +15,10 @@ import { GETS_ONE_TEAM_MEMBER_DTO } from '../../../application/ports/secondary/g
       useExisting: FirebaseTeamMembersService,
     },
     { provide: ADDS_TEAM_MEMBER_DTO, useExisting: FirebaseTeamMembersService },
-    { provide: GETS_ONE_TEAM_MEMBER_DTO, useExisting: FirebaseTeamMembersService }
+    {
+      provide: GETS_ONE_TEAM_MEMBER_DTO,
+      useExisting: FirebaseTeamMembersService,
+    },
   ],
   exports: [],
 })

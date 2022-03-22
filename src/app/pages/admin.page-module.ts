@@ -2,8 +2,10 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { AdminPage } from './admin.page';
-import { CreateTeamMemberComponentModule } from '../../../projects/team/src/lib/adapters/primary/ui/create-team-member.component-module';
-import { FirebaseTeamMembersServiceModule } from '../../../projects/team/src/lib/adapters/secondary/infrastructure/firebase-team-members.service-module';
+import {
+  FirebaseTeamMembersServiceModule,
+  CreateTeamMemberComponentModule,
+} from '@team';
 
 @NgModule({
   imports: [
@@ -15,7 +17,7 @@ import { FirebaseTeamMembersServiceModule } from '../../../projects/team/src/lib
       },
     ]),
     CreateTeamMemberComponentModule,
-    FirebaseTeamMembersServiceModule
+    FirebaseTeamMembersServiceModule,
   ],
   declarations: [AdminPage],
   providers: [],
